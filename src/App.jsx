@@ -106,7 +106,7 @@ const App = () => {
   // Clear completed rows
   const sweepRows = useCallback(
     (newStage) => {
-      setRowsCleared(0); // Reset rowsCleared before counting new rows
+      setRowsCleared(0); 
       let rowsToAdd = 0;
       const stage = newStage.reduce((acc, row) => {
         if (row.findIndex((cell) => cell[0] === 0) === -1) {
@@ -156,7 +156,7 @@ const App = () => {
     }
   };
 
-  // Start the game automatically when component mounts
+  
   useEffect(() => {
     startGame();
   }, []);
@@ -179,18 +179,18 @@ const App = () => {
         {gameOver ? (
           <div className="game-over">
             <h2>Game Over</h2>
-            <button onClick={startGame}>New Game</button>
+            <button onClick={startGame}>Jugar de nuevo</button>
           </div>
         ) : (
           <div className="game-area">
             <Board board={stage} />
             <div className="side-panel">
               <div className="game-stats">
-                <p>Score: {score}</p>
-                <p>Rows: {rows}</p>
-                <p>Level: {level}</p>
+                <p>Puntuación: {score}</p>
+                <p>Filas: {rows}</p>
+                <p>Nivel: {level}</p>
               </div>
-              <button onClick={startGame}>New Game</button>
+              <button onClick={startGame}>Jugar de nuevo</button>
             </div>
           </div>
         )}
