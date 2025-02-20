@@ -1,0 +1,143 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1a1d23;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-area {
+  display: flex;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(20, 30px);
+  grid-gap: 1px;
+  padding: 10px;
+  background-color: #2a2e35;
+  border-radius: 5px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 30px);
+  grid-gap: 1px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cell.filled {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 200px;
+  padding: 20px;
+  background-color: #2a2e35;
+  border-radius: 5px;
+}
+
+.game-stats {
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.game-stats p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.game-over {
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.game-over h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ff4757;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #4834d4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #686de0;
+}
